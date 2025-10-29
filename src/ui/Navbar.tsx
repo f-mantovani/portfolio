@@ -1,3 +1,4 @@
+"use client";
 import NavbarLink from "./NavbarLinks";
 
 const paths = [
