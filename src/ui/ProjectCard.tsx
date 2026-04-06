@@ -1,6 +1,6 @@
 import { Project } from "@/public/types";
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 
 const titleCapitalized = (title: string) => {
   return title
@@ -14,7 +14,8 @@ const titleCapitalized = (title: string) => {
 
 const sliceTech = (techArray: string[]) => techArray.slice(0, 3);
 
-const ProjectCard = ({ imageUrl, techStack, title, _id }: Project) => {
+// TODO: Should add _id later
+const ProjectCard = ({ imageUrl, techStack, title }: Project) => {
   return (
     <div
       // href={`/projects/${_id}`}

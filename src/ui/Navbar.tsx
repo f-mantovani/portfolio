@@ -1,12 +1,19 @@
 "use client";
 import NavbarLink from "./NavbarLinks";
+import { usePathname } from "next/navigation";
 
 const paths = [
   { link: "Home", path: "/" },
-  { link: "Projects", path: " projects" },
-  { link: "About Me", path: "about" },
-  { link: "Contact", path: "contact" },
+  { link: "Projects", path: "/projects" },
+  { link: "About Me", path: "/about" },
+  { link: "Contact", path: "/contact" },
 ];
+
+function getTitle(route: string) {
+  if (route === "/") return "Software Developer";
+  const path = paths.find(({ path }) => path === route);
+  return path ? path.link : "";
+}
 
 export default function Navbar() {
   return (
@@ -26,7 +33,7 @@ export default function Navbar() {
         </div>
       </nav>
       <h1 className="main-title text-[var(--foreground)] font-play not-italic font-bold text-6xl leading-16 p-16 ">
-        Software Developer
+        {getTitle(usePathname())}
       </h1>
     </header>
   );
