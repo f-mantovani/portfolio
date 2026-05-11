@@ -6,7 +6,6 @@ const paths = [
   { link: "Home", path: "/" },
   { link: "Projects", path: "/projects" },
   { link: "About Me", path: "/about" },
-  { link: "Contact", path: "/contact" },
 ];
 
 function getTitle(route: string) {

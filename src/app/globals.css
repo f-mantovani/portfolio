@@ -35,3 +35,7 @@ a {
   font-style: normal;
   font-weight: 700;
 }
+
+.scrollbar {
+  scrollbar-width: none;
+}
